@@ -1,16 +1,18 @@
 from tkinter import *
-
 ventana = Tk()
 menu = Menu(ventana)
 ventana.config(menu=menu)
-
 File=Menu(menu, tearoff=0)
-File.add_command(label='new proyect')
+File.add_command(label='Nuevo Proyecto')
+File.add_command(label='Abrir Proyecto')
+File.add_command(label='Guardar')
 Edit=Menu(menu, tearoff=0)
 Help=Menu(menu, tearoff=0)
-menu.add_cascade(label="File", menu =File)
-menu.add_cascade(label="Edit", menu =Edit)
-menu.add_cascade(label="Help", menu =Help)
+menu.add_cascade(label='Archivos', menu =File)
+menu.add_cascade(label='Edicion', menu =Edit)
+menu.add_cascade(label='Ayuda', menu =Help)
 
-ventana.title('hola')
+ventana.geometry('400x400')
+ventana.title('Ayuda a las personas')
+ventana.configure(bg="sky blue")
 ventana.mainloop()
